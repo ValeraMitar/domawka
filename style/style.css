@@ -1,0 +1,124 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	margin: 0;
+	font-family: "Segoe UI",sans-serif;
+	font-size: 11pt;
+}
+h1 {
+	text-transform: capitalize;
+	margin: 0 0 20px 0;
+}
+p {
+	text-indent: 1cm;
+	margin: 10px 20px 20px 20px;
+
+}
+.menu  {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.menu a {
+	text-decoration: none;
+	text-transform: uppercase;
+	list-style-type: none;
+	padding: 0;
+	display: block;
+	color:#fff;
+	line-height: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.menu a:hover {
+	background:rgba(232, 223, 223, 0.88);
+	color:#000; 
+}
+.menu a::before {
+	display: inline-block;
+	text-align: center;
+	width: 50px;
+	color:black;
+}
+a[href="#perexod1"]::before {
+	content: '\2708'
+}
+a[href="#perexod2"]::before {
+	content: '\2710'
+}
+a[href="#perexod3"]::before {
+	content: '\2709'
+}
+a[href="https://www.facebook.com/profile.php?id=100014165654308"]::before {
+	content: '\26D4'
+}
+a[target="_blank"]::after {
+	content: '\279A'
+}
+ .menu a::after {
+ 	color:black;
+ 	display: inline-block;
+	text-align: center;
+	width: 20px;
+ }
+#menuwka {
+	flex: 1 0 250px;
+	background: #666;
+
+}
+
+#content {
+	background: white;
+	flex-grow: 1;
+	padding: 10px;
+}
+
+
+@media all and (min-width: 500px) and (max-width: 850px) {
+	#menuwka {
+		flex:0 0 50px;
+	}
+	.menu a {
+		width: 50px;
+	}
+	#content {
+		padding: 0 20px 20px 20px;
+	}
+}
+@media all and (max-width: 499px) {
+body {
+	flex-direction: column;
+}
+#menuwka {
+	flex:0 0 50px;
+	height: 50px;
+	text-align: center;
+}
+.menu li {
+	display: inline-block;
+	width: 50px;
+}
+#content {
+	padding: 0;
+}
+p {
+	margin: 10px 0 10px 5px;
+}
+}
+/*фишка с якорями*/
+#content div {
+	display: none;
+	}
+
+#content div:target {
+	display: block;
+}
+#content div:last-child{
+	display: block;
+}
+#content div:target:not(:last-child) ~ div {
+display:none;
+}
+
