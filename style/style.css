@@ -118,7 +118,7 @@ p {
 #content div:last-child{
 	display: block;
 }
-#content div:target:not(:last-child) ~ div {
+#content div:target ~ div {
 display:none;
 }
 
